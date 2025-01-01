@@ -1,0 +1,49 @@
+:root {
+  /* 主题色 */
+  --color-space-purple: #7B2CBF;
+  --color-dream-blue: #00B4D8;
+  --color-cloud-gold: #FFD700;
+  --color-cotton-white: #F8F9FA;
+  
+  /* 玻璃拟态效果 */
+  --glass-background: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(31, 38, 135, 0.37);
+  
+  /* 动画时间 */
+  --transition-slow: 0.5s;
+  --transition-normal: 0.3s;
+  --transition-fast: 0.2s;
+}
+
+/* 玻璃拟态混合 */
+.glass-effect {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+}
+
+/* 云朵动画效果 */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shooting-star {
+  0% { 
+    transform: translateX(200%) translateY(-200%);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(-200%) translateY(200%);
+    opacity: 0;
+  }
+}
